@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boxes Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px;
+            background-color: #f1f1f1;
+            min-height: 10vh;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url("https://media.istockphoto.com/id/1315756613/photo/business-network-concept-group-of-businessperson-teamwork-data-analysis-management-strategy.jpg?s=612x612&w=0&k=20&c=E9qXtge3iREbEPlgeiHfKH9BlEFoGEG3TeMGCb-447U=");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        footer {
+            text-align: center;
+            padding: 200px;
+            background-color: #f1f1f1;
+            min-height: 20vh;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url("https://img.freepik.com/free-photo/top-view-desk-concept-with-copy-space_23-2148223124.jpg?ga=GA1.1.1535560922.1728392783&semt=ais_hybrid");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        header img, footer img {
+            max-width: 100px;
+            height: 100px;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaeaea;
+            padding: 20px;
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 7000px;
+            width: 100%;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(to bottom right, brown, #1E90FF);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span style="color: white;"><h1>OUR SERVICES</h1><br>
+        <img src="header-image.jpg" alt="">
+    </header>
+    <main>
+        <div class="box-container">
+            <!-- Your box content here -->
+        </div>
+    </main>
+    <footer>
+        <span style="color: black;">
+            <h1>"Empowering Your Success, One Service at a Time."</h1><br>
+            <h2>"Creating Opportunities, Delivering Excellence."</h2><br>
+            <h3>"Your Journey to Success Starts Here."</h3>
+            <p>"Join us in shaping a brighter future."</p>
+            <p>"Innovation and commitment at every step."</p>
+        </span>
+        <img src="https://reshapp.in/wp-content/uploads/2020/12/1-21-1.png" width="200" height="200" alt="Footer Logo">
+    </footer>
+</body>
+</html>

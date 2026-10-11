@@ -1,0 +1,148 @@
+.contact{
+    width:80%;
+    margin:auto;
+    padding: 10px;
+    margin-left: 100px;
+    
+}
+.col{
+    flex-basis:48%;
+    margin-bottom: 30px;
+}
+.col div{
+    display:flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.col div .fa{
+    font-size: 28px;
+    color:lightseagreen;
+    margin: 10px;
+    margin-right: 30px;
+}
+.sub-header9{
+    height: 50vh;
+    width:100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyy8bhmpub0lhSAMatoKzSYsiuPalAJkmwsQ&s");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 50px;
+}
+.sub-header9 h1{
+    margin-top:100px;
+}
+.row1{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+}
+.col h5 p{
+    font-size: 30px;
+}
+*{
+    margin:0;
+    padding:0;
+}
+.header{
+    min-height:100vh;
+    width:100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("https://media.istockphoto.com/photos/farmer-giving-box-of-veg-to-customer-on-a-sunny-day-picture-id1061400948?b=1&k=20&m=1061400948&s=170667a&w=0&h=TR1TFLy1-JptKP-1Kb2-2oe8KYPeKn-kiNNi_yY7iLU=");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display:flex;
+    padding:2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    mix-blend-mode: multiply;
+    width:90px;
+    color: #f1efef;
+
+}
+.nav-links{
+    flex:1;
+    text-align:right;
+}
+.nav-links ul li{
+    list-style:none;
+    display:inline-block;
+    padding:12px 9px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+.logo{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-style: bold;
+    text-decoration: none;
+   
+}
+.nav-links ul li::after{
+    content:'';
+    width:0%;
+    height: 2px;
+    background:whitesmoke;
+    display:block;
+    margin:auto;
+    transition:0.5s;
+}
+.nav-links ul li:hover::after{
+    width:100%;
+}
+.text-box{
+    width:90%;
+    color:#fff;
+    position:absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size:52px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size:16px;
+    color:white;
+}
+.hero-btn{
+display:inline-block;
+text-decoration: none;
+color:white;
+border:1px solid white;
+padding:5px 10px;
+font-size: 13px;
+background: transparent;
+position:relative;
+cursor:pointer;border-radius: 10cm;border-style: groove;
+}
+.hero-btn:hover{
+    border:1px solid #c4b4b4;
+    background:rgb(59, 61, 78);
+    color: azure;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.footer h1{
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+

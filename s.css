@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTXD6zcaOJRZXQjrEqTMvQ80Wpv5Er-G3lKA&s');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+/* Styling for each image */
+.image {
+    width: 350px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+/* Image-specific background images */
+#image1 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS1FTUYMUdpoIF7_KTB6hbOBixQupMaITNRQ&s'); /* Replace with your first image */
+}
+
+#image2 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcN9qavrKysLObrm-OxdzPC7sFsJvmaDmd6A&s'); /* Replace with your second image */
+}
+
+#image3 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf79TqZ2_TbW0KDoo2tZ6ME25VrNEAoN3ZFQ&s'); /* Replace with your third image */
+}
+
+/* Hover effect for images */
+.image:hover {
+    transform: scale(1.1);  /* Image enlarges */
+    opacity: 0.8;  /* Slightly transparent */
+}
+
+/* Optional: Add a simple shadow effect for a more interactive feel */
+.image:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.text-box{
+    width:90%;
+    color:lightseagreen;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size:52px;
+    font-style: oblique;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boxes Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px;
+            background-color: #f1f1f1;
+            min-height: 10vh;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("https://media.istockphoto.com/id/1315756613/photo/business-network-concept-group-of-businessperson-teamwork-data-analysis-management-strategy.jpg?s=612x612&w=0&k=20&c=E9qXtge3iREbEPlgeiHfKH9BlEFoGEG3TeMGCb-447U=");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        footer {
+            text-align: center;
+            padding: 200px;
+            background-color: #f1f1f1;
+            min-height: 20vh;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("https://img.freepik.com/free-photo/top-view-desk-concept-with-copy-space_23-2148223124.jpg?ga=GA1.1.1535560922.1728392783&semt=ais_hybrid");
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-left: 20px;
+        }
+
+        footer img {
+            width: 100px;
+            height: 100px;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eaeaea;
+            padding: 20px;
+        }
+
+        .box-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            max-width: 7000px;
+            width: 100%;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(to bottom right, #FF7F50, #1E90FF);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+        .additional-footer {
+            position: relative;
+            background-color: #f1f1f1;
+            padding: 50px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .additional-footer img {
+            position: absolute;
+            right: 20px;
+            bottom: -20px;
+            max-width: 150px;
+            height: auto;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            20% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span style="color: white;">
+            <h1>OUR SERVICES</h1>
+            <br>
+            <img src="header-image.jpg" alt="">
+        </span>
+    </header>
+    <main>
+        <div class="box-container">
+            <div class="box">✵Job Search Assistance:<br>
+                Job Listings: Provide an up-to-date database of job openings across various industries, allowing users to search based on job title, location, salary, and experience level.
+                Job Alerts: Offer customized notifications for users about job openings that match their skills, preferences, and location.</div>
+            <div class="box">✵ Resume Writing Services:<br>
+                Professional Resume Writing: Help users craft well-organized, tailored resumes that highlight their skills, experience, and qualifications.
+                Cover Letter Creation: Assist users in writing personalized cover letters to accompany their job applications.</div>
+            <div class="box">✵Interview Preparation:<br>
+                Mock Interviews: Conduct simulated interviews to help candidates practice responses to common interview questions and improve their confidence.
+                Interview Coaching: Provide one-on-one coaching sessions on how to present oneself during interviews, including body language, tone, and response strategies.</div>
+            <div class="box">✵Job Readiness Programs:<br>
+                Onboarding Support: Help users prepare for their new job by providing information on company cultures, job responsibilities, and industry expectations.
+                Workplace Etiquette: Teach users the professional behavior and etiquette required in a corporate environment, including teamwork, punctuality, and effective communication.</div>
+            <div class="box">✵Networking and Professional Development:
+                Networking Events: Organize virtual or in-person networking events where job seekers can meet potential employers, mentors, and peers in their field.
+                LinkedIn Profile Optimization: Provide guidance and workshops on optimizing LinkedIn profiles to make users more attractive to potential employers.</div>
+            <div class="box">✵Job Search Strategy Coaching:<br>
+                Job Search Tactics: Teach users effective job search strategies, such as optimizing job applications, tailoring resumes for specific roles, and how to navigate job boards and employer websites.
+                Personal Branding: Assist users in building and refining their personal brand, including an online portfolio, social media presence, and professional reputation.</div>
+            <div class="box">✵Internship Placement & Support:<br>
+                Internship Matching: Offer a service that matches job seekers with internships in relevant fields, especially for fresh graduates or individuals changing careers.
+                Internship Mentorship: Provide mentorship for interns to help them grow professionally, understand workplace dynamics, and develop industry-specific skills.</div>
+            <div class="box">✵Technical Skills Training:<br>
+                Programming and Software Development: Training in programming languages (e.g., Python, Java, C++, JavaScript) and frameworks (e.g., React, Node.js) to equip users with the skills to develop software and applications.
+                Web Development: Courses on front-end (HTML, CSS, JavaScript) and back-end (Node.js, PHP, Ruby) development, as well as full-stack development to build websites and web applications.
+                </div>
+            <div class="box">✵ Mentorship and Career Development for Interns:<br>
+                Mentorship Programs: Pair interns with experienced professionals or senior team members who can offer guidance, advice, and career insights, helping the intern navigate their internship and career path.
+                Career Pathways: Offer training on how to map out career paths within their chosen industry, including understanding the required skills, certifications, and qualifications for advancement.</div>
+            <div class="box">✵Entrepreneurship & Start-Up Training:<br>
+                Business Planning and Strategy: Courses to teach users how to write a business plan, identify business opportunities, and create a roadmap for success.
+                Funding and Investment: Training on securing funding, understanding venture capital, crowdfunding, and managing finances for start-ups.
+                Marketing for Start-ups: Programs on marketing strategies for small businesses, including branding, digital marketing, customer acquisition, and sales funnel optimization.</div>
+        </div>
+    </main>
+    <footer>
+        <span style="color:black;">
+            <h1>"Empowering Your Success, One Service at a Time."</h1><br>
+            <h2>"Creating Opportunities, Delivering Excellence."</h2><br>
+            <h3>"Your Journey to Success Starts Here."</h3>
+        </span>
+        <span style="font-size: 50px; color: black;"></span>
+        <!-- Image with adjusted size -->
+        <img src="https://reshapp.in/wp-content/uploads/2020/12/1-21-1.png" width="200" height="200">
+    </footer>
+    
+    <div class="additional-footer">
+        <span>Exclusive Offer Just for You!</span>
+        <img src="https://example.com/your-image.png">
+    </div>
+</body>
+</html>

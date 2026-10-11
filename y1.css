@@ -1,0 +1,37 @@
+*{
+    margin:0px;
+    padding:10px
+
+}
+.visit h1{
+    text-align: center;
+    padding: 0px;
+    font-size: 30px;
+    color:white;
+
+}
+.visit h1{
+    text-align: center;
+    padding-top: 10px;
+    color:white;
+    text-decoration: underline;
+    padding-top: 40px;
+}
+.visit p{
+    text-align: justify;
+    padding-left: 20px;
+    padding-right:20px;
+    font-size: larger;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.visit{
+    width:100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUhuYgZzLuJvbyA3btnwuzG3gRzIiij1wO6g&s");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 0px 0;
+    min-height:100vh;
+}

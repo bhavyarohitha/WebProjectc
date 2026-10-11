@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Change this to any color you want for the background */
+}
+
+.container {
+    text-align: center;
+}
+
+.logo {
+    max-width: 300px; /* Adjust the size of the logo */
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 20px 0 10px 0;
+    color: #333; /* Title color */
+}
+
+p {
+    font-size: 1.2em;
+    color: #555; /* Text color */
+}

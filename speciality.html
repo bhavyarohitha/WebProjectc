@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConnect website Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="med.css">
+</head>
+<body>
+    <section class="sub-header1">
+        <nav>
+           <a><h2 class="logo">MedConnect</h2></a>
+           <div class="nav-links">
+            <ul>
+                <li><a href="med.html"><h3>HOME</h3></a></li>
+                <li><a href="about.html"><h3>ABOUT US</h3></a></li>
+                <li><a href="dp.html"><h3>DEPARTMENTS</h3></a></li>
+                <li><a href="s.html"><h3>OUR SERVICES</h3></a></li>
+                <li><a href="c.html"><h3>CONTACT US</h3></a></li>
+                <li><a href="login.html"><h3>LOGIN/SIGN-UP</h3></a></li>
+            </ul>
+           </div>
+        </nav><br><br>
+    <h2>Specialist Doctor Finder</h2><br><br>
+    <div id="bujji" class="bujji">
+        <input type="text" id="searchInput" placeholder="Enter small disease name..." />
+        <button onclick="searchDoctor()">Search</button>
+    </div>
+    
+
+    <div id="doctorDetails" class="doctor-details">
+        <h3 id="doctorName"></h3>
+        <p id="doctorSpecialty"></p>
+        <p id="doctorHospital"></p>
+        <p id="doctorContact"></p>
+        <p id="doctorEmail"></p>
+        <p id="doctorAvailability"></p>
+    </div>
+
+    <script>
+        const doctors = {
+            "flu": {
+                name: "Dr. Sarah Lee",
+                specialty: "General Practitioner",
+                hospital: "City Health Clinic",
+                contact: "Phone: (111) 222-3333",
+                email: "sarah.lee@cityhealth.com",
+                experience: "10 years",
+                availability: "Mon-Fri, 9 AM - 5 PM"
+            },
+            "cold": {
+                name: "Dr. Michael Brown",
+                specialty: "Family Physician",
+                hospital: "Green Valley Hospital",
+                contact: "Phone: (222) 333-4444",
+                email: "michael.brown@gvhospital.com",
+                experience: "8 years",
+                availability: "Mon-Fri, 8 AM - 4 PM"
+            },
+            "headache": {
+                name: "Dr. Amanda White",
+                specialty: "Neurologist",
+                hospital: "Brain Care Center",
+                contact: "Phone: (333) 444-5555",
+                email: "amanda.white@braincare.com",
+                experience: "15 years",
+                availability: "Mon-Wed, 10 AM - 3 PM"
+            },
+            "allergy": {
+                name: "Dr. Andrew Patel",
+                specialty: "Allergist",
+                hospital: "Sunshine Allergy Clinic",
+                contact: "Phone: (444) 555-6666",
+                email: "andrew.patel@sunshineallergy.com",
+                experience: "12 years",
+                availability: "Tue-Thu, 11 AM - 4 PM"
+            },
+            "stomach ache": {
+                name: "Dr. Emily Davis",
+                specialty: "Gastroenterologist",
+                hospital: "Stomach Care Clinic",
+                contact: "Phone: (555) 666-7777",
+                email: "emily.davis@stomachcare.com",
+                experience: "9 years",
+                availability: "Mon-Fri, 10 AM - 6 PM"
+            },
+            "skin rash": {
+                name: "Dr. Rachel Kim",
+                specialty: "Dermatologist",
+                hospital: "Skin Care Dermatology",
+                contact: "Phone: (666) 777-8888",
+                email: "rachel.kim@skincare.com",
+                experience: "11 years",
+                availability: "Mon-Sat, 9 AM - 2 PM"
+            },
+            "fever": {
+                name: "Dr. James Carter",
+                specialty: "Infectious Disease Specialist",
+                hospital: "City General Hospital",
+                contact: "Phone: (777) 888-9999",
+                email: "james.carter@citygeneral.com",
+                experience: "20 years",
+                availability: "Mon-Fri, 9 AM - 5 PM"
+            },
+            "sore throat": {
+                name: "Dr. Linda Roberts",
+                specialty: "Otolaryngologist (ENT)",
+                hospital: "Voice & Throat Clinic",
+                contact: "Phone: (888) 999-0000",
+                email: "linda.roberts@voicethroat.com",
+                experience: "13 years",
+                availability: "Mon-Thu, 8 AM - 3 PM"
+            },
+            "ear infection": {
+                name: "Dr. William Hughes",
+                specialty: "Otolaryngologist (ENT)",
+                hospital: "Healthy Hearing Clinic",
+                contact: "Phone: (999) 000-1111",
+                email: "william.hughes@healthyhearing.com",
+                experience: "17 years",
+                availability: "Tue-Fri, 9 AM - 4 PM"
+            },
+            "conjunctivitis": {
+                name: "Dr. Lucy Parker",
+                specialty: "Ophthalmologist",
+                hospital: "Eye Care Center",
+                contact: "Phone: (000) 111-2222",
+                email: "lucy.parker@eyecare.com",
+                experience: "14 years",
+                availability: "Mon-Fri, 10 AM - 5 PM"
+            },
+            "toothache": {
+                name: "Dr. Henry Thomas",
+                specialty: "Dentist",
+                hospital: "Bright Smile Dental Clinic",
+                contact: "Phone: (111) 222-3334",
+                email: "henry.thomas@brightsmile.com",
+                experience: "10 years",
+                availability: "Mon-Sat, 9 AM - 6 PM"
+            },
+            "constipation": {
+                name: "Dr. Olivia Martin",
+                specialty: "Gastroenterologist",
+                hospital: "Gut Health Clinic",
+                contact: "Phone: (222) 333-4445",
+                email: "olivia.martin@guthealth.com",
+                experience: "9 years",
+                availability: "Tue-Fri, 11 AM - 6 PM"
+            },
+            "nausea": {
+                name: "Dr. Kevin Wilson",
+                specialty: "General Practitioner",
+                hospital: "City Wellness Center",
+                contact: "Phone: (333) 444-5556",
+                email: "kevin.wilson@citywellness.com",
+                experience: "7 years",
+                availability: "Mon-Fri, 8 AM - 5 PM"
+            },
+            "diarrhea": {
+                name: "Dr. Steven Green",
+                specialty: "Gastroenterologist",
+                hospital: "Stomach Care Clinic",
+                contact: "Phone: (444) 555-6667",
+                email: "steven.green@stomachcare.com",
+                experience: "12 years",
+                availability: "Mon-Fri, 9 AM - 4 PM"
+            },
+            "muscle pain": {
+                name: "Dr. Martha Collins",
+                specialty: "Orthopedist",
+                hospital: "Ortho Care Center",
+                contact: "Phone: (555) 666-7778",
+                email: "martha.collins@orthocare.com",
+                experience: "16 years",
+                availability: "Mon-Wed, 8 AM - 3 PM"
+            },
+            "back pain": {
+                name: "Dr. George Baker",
+                specialty: "Chiropractor",
+                hospital: "Back & Spine Clinic",
+                contact: "Phone: (666) 777-8889",
+                email: "george.baker@backspine.com",
+                experience: "18 years",
+                availability: "Mon-Sat, 9 AM - 2 PM"
+            },
+            "indigestion": {
+                name: "Dr. Laura Jones",
+                specialty: "Gastroenterologist",
+                hospital: "Digestive Health Institute",
+                contact: "Phone: (777) 888-9990",
+                email: "laura.jones@digestivehealth.com",
+                experience: "11 years",
+                availability: "Tue-Thu, 9 AM - 5 PM"
+            },
+            "acne": {
+                name: "Dr. Nicole Foster",
+                specialty: "Dermatologist",
+                hospital: "Skin Glow Clinic",
+                contact: "Phone: (888) 999-0001",
+                email: "nicole.foster@skinglow.com",
+                experience: "6 years",
+                availability: "Mon-Fri, 9 AM - 5 PM"
+            },
+            
+            // More conditions and doctors can be added here
+        };
+        
+        
+
+        function searchDoctor() {
+            const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+            const doctorDetails = doctors[searchQuery];
+
+            if (doctorDetails) {
+                document.getElementById("doctorName").innerText = doctorDetails.name;
+                document.getElementById("doctorSpecialty").innerText = "Specialty: " + doctorDetails.specialty;
+                document.getElementById("doctorHospital").innerText = "Hospital: " + doctorDetails.hospital;
+                document.getElementById("doctorContact").innerText = "Contact: " + doctorDetails.contact;
+                document.getElementById("doctorEmail").innerText = "Email: " + doctorDetails.email;
+                document.getElementById("doctorAvailability").innerText = "Availability: " + doctorDetails.availability;
+                document.getElementById("doctorDetails").style.display = "block";
+            } else {
+                document.getElementById("doctorDetails").style.display = "none";
+                alert("No specialist found for this disease. Please try another search.");
+            }
+        }
+    </script>
+</section>
+    <section class="footer">
+        <h4>About us</h4>
+        <p>The Hospital Common Platform serves as a centralized hub where patients can easily access information about various hospitals and healthcare services and specialists related to there health issue.</p>
+        <div class="icons">
+            <i style="font-size:20px;color:blue" class="fa">&#xf082;</i>
+            <i style="font-size:20px;color:rgb(43, 17, 192)" class="fa">	&#xf081;</i>
+            <i style="font-size:20px;color:brown" class="fa">&#xf16d;</i>
+            <i style="font-size:20px;color:rgb(79, 6, 214)" class="fa">&#xf08c;</i>
+        </div>
+    </section>
+    
+    <script>
+        var navlinks=document.getElementById("navlinks");
+        function showMenu(){
+            navlinks.style.right="0";
+        }
+        function hideMenu(){
+            navlinks.style.right="-200px";
+        }
+    </script>
+
+</body>
+</html>
